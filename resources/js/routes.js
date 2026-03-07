@@ -1,14 +1,16 @@
-import DashboardPanel from './home/components/DashboardPanel';
-import Scheduling from './home/components/Scheduling.vue';
-import SalesMonitoring from './home/components/SalesMonitoring.vue';
-import Inquiries from './home/components/Inquiries.vue';
-import Messages from './home/components/Messages.vue';
-import Inventory from './home/components/Inventory.vue';
-import Calendar from './home/components/Calendar.vue';
-import Settings from './home/components/Settings.vue';
+import { defineAsyncComponent } from 'vue';
+
+const Dashboard = defineAsyncComponent(() => import('./home/components/Dashboard.vue'));
+const Scheduling = defineAsyncComponent(() => import('./home/components/Scheduling.vue'));
+const SalesMonitoring = defineAsyncComponent(() => import('./home/components/SalesMonitoring.vue'));
+const Inquiries = defineAsyncComponent(() => import('./home/components/Inquiries.vue'));
+const Messages = defineAsyncComponent(() => import('./home/components/Messages.vue'));
+const Inventory = defineAsyncComponent(() => import('./home/components/Inventory.vue'));
+const Calendar = defineAsyncComponent(() => import('./home/components/Calendar.vue'));
+const Settings = defineAsyncComponent(() => import('./home/components/Settings.vue'));
 
 export const routes = [
-    { key: 'dashboard', label: 'Dashboard', path: '/home/dashboard', component: DashboardPanel },
+    { key: 'dashboard', label: 'Dashboard', path: '/home/dashboard', component: Dashboard },
     { key: 'scheduling', label: 'Scheduling', path: '/home/scheduling', component: Scheduling },
     { key: 'sales', label: 'Sales Monitoring', path: '/home/sales', component: SalesMonitoring },
     { key: 'inquiries', label: 'Inquiries', path: '/home/inquiries', component: Inquiries },

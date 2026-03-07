@@ -29,9 +29,9 @@
                     <h3 class="widget-title">Sales Monitoring</h3>
                     <p class="muted-copy">Monthly Channel Split</p>
                     <div class="overview-track">
-                        <span style="width: 26%; background: #a6a9b1;"></span>
-                        <span style="width: 39%; background: #7d818c;"></span>
-                        <span style="width: 35%; background: #575b67;"></span>
+                        <span class="track-a" style="width: 26%;"></span>
+                        <span class="track-b" style="width: 39%;"></span>
+                        <span class="track-c" style="width: 35%;"></span>
                     </div>
                     <div class="legend-row">
                         <p><strong>14%</strong> Walk-in</p>
