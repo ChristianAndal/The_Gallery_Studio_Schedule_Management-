@@ -8,7 +8,9 @@
             width="250"
         >
             <div class="brand-wrap">
-                <div class="brand-mark">GS</div>
+                <div class="brand-mark">
+                    <img :src="brandLogoUrl" alt="Gallery Studio Logo" style="width:300px;" class="brand-logo" />
+                </div>
                 <h1 class="brand-title">Gallery Studio</h1>
             </div>
 
@@ -113,6 +115,7 @@ import { DEFAULT_ROUTE_PATH, getRouteByPath, redirectTo, routes } from '../route
 const { mdAndDown } = useDisplay();
 const drawer = ref(!mdAndDown.value);
 const currentPath = ref(window.location.pathname);
+const brandLogoUrl = `${window.location.origin}/logo.png`;
 
 const iconPaths = {
     dashboard: 'M3 3h8v8H3V3zm10 0h8v5h-8V3zM3 13h8v8H3v-8zm10-3h8v11h-8V10z',
@@ -121,6 +124,7 @@ const iconPaths = {
     inquiries: 'M4 4h16v12H7l-3 3V4zm2 2v8.17L6.17 14H18V6H6z',
     messages: 'M2 5h20v14H2V5zm2 2v.5l8 5 8-5V7H4zm16 10V9.78l-8 5-8-5V17h16z',
     inventory: 'M12 2l9 4.5v11L12 22l-9-4.5v-11L12 2zm0 2.2L5.5 7 12 9.8 18.5 7 12 4.2zM5 8.6v7.7l6 3V11.6L5 8.6zm14 0l-6 3v7.7l6-3V8.6z',
+    gallery: 'M4 5h16v14H4V5zm2 2v10h12V7H6zm1 8 3-4 2 2 3-4 2 6H7z',
     calendar: 'M7 2h2v2h6V2h2v2h3v18H4V4h3V2zm11 6H6v12h12V8zm-8 3h4v4h-4v-4z',
     settings: 'M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58-1.92-3.32-2.39.96a7.29 7.29 0 0 0-1.63-.94L14.87 3h-3.74l-.36 2.18c-.58.23-1.12.54-1.63.94l-2.39-.96-1.92 3.32 2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94l-2.03 1.58 1.92 3.32 2.39-.96c.51.4 1.05.71 1.63.94l.36 2.18h3.74l.36-2.18c.58-.23 1.12-.54 1.63-.94l2.39.96 1.92-3.32-2.03-1.58zM13 15h-2v-2h2v2zm0-4h-2V9h2v2z',
 };

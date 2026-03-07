@@ -6,6 +6,7 @@ const SalesMonitoring = defineAsyncComponent(() => import('./home/components/Sal
 const Inquiries = defineAsyncComponent(() => import('./home/components/Inquiries.vue'));
 const Messages = defineAsyncComponent(() => import('./home/components/Messages.vue'));
 const Inventory = defineAsyncComponent(() => import('./home/components/Inventory.vue'));
+const Gallery = defineAsyncComponent(() => import('./home/components/Gallery.vue'));
 const Calendar = defineAsyncComponent(() => import('./home/components/Calendar.vue'));
 const Settings = defineAsyncComponent(() => import('./home/components/Settings.vue'));
 
@@ -17,6 +18,7 @@ export const routes = [
     { key: 'calendar', label: 'Calendar', path: '/home/calendar', component: Calendar },
     { key: 'messages', label: 'Messages', path: '/home/messages', component: Messages },
     { key: 'inventory', label: 'Inventory', path: '/home/inventory', component: Inventory },
+    { key: 'gallery', label: 'Gallery', path: '/home/gallery', component: Gallery },
     { key: 'settings', label: 'Settings', path: '/home/settings', component: Settings },
 ];
 
