@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/home/dashboard');
 Route::view('/home/{section?}', 'home')
-    ->where('section', 'dashboard|inquiries|social|sales|inventory|mesages|gallery|settings')
+    ->where('section', 'dashboard|scheduling|sales|inquiries|calendar|messages|inventory|settings')
     ->name('home');

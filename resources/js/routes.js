@@ -1,14 +1,21 @@
-import SectionPanel from './home/components/SectionPanel';
+import DashboardPanel from './home/components/DashboardPanel';
+import Scheduling from './home/components/Scheduling.vue';
+import SalesMonitoring from './home/components/SalesMonitoring.vue';
+import Inquiries from './home/components/Inquiries.vue';
+import Messages from './home/components/Messages.vue';
+import Inventory from './home/components/Inventory.vue';
+import Calendar from './home/components/Calendar.vue';
+import Settings from './home/components/Settings.vue';
 
 export const routes = [
-    { key: 'dashboard', label: 'Dashboard', path: '/home/dashboard', component: SectionPanel },
-    { key: 'inquiries', label: 'Inquiries', path: '/home/inquiries', component: SectionPanel },
-    { key: 'social', label: 'Social', path: '/home/social', component: SectionPanel },
-    { key: 'sales', label: 'Sales', path: '/home/sales', component: SectionPanel },
-    { key: 'inventory', label: 'Inventory', path: '/home/inventory', component: SectionPanel },
-    { key: 'mesages', label: 'Mesages', path: '/home/mesages', component: SectionPanel },
-    { key: 'gallery', label: 'Gallery', path: '/home/gallery', component: SectionPanel },
-    { key: 'settings', label: 'Settings', path: '/home/settings', component: SectionPanel },
+    { key: 'dashboard', label: 'Dashboard', path: '/home/dashboard', component: DashboardPanel },
+    { key: 'scheduling', label: 'Scheduling', path: '/home/scheduling', component: Scheduling },
+    { key: 'sales', label: 'Sales Monitoring', path: '/home/sales', component: SalesMonitoring },
+    { key: 'inquiries', label: 'Inquiries', path: '/home/inquiries', component: Inquiries },
+    { key: 'calendar', label: 'Calendar', path: '/home/calendar', component: Calendar },
+    { key: 'messages', label: 'Messages', path: '/home/messages', component: Messages },
+    { key: 'inventory', label: 'Inventory', path: '/home/inventory', component: Inventory },
+    { key: 'settings', label: 'Settings', path: '/home/settings', component: Settings },
 ];
 
 const routeByPath = new Map(routes.map((route) => [route.path, route]));

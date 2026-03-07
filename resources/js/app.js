@@ -32,11 +32,15 @@ if (contentElement && sidebarButtons.length > 0) {
         setActiveButton(route.key);
 
         if (pageTitleElement) {
-            pageTitleElement.textContent = route.label;
+            pageTitleElement.textContent = route.key === 'dashboard'
+                ? 'Studio Scheduling System'
+                : route.label;
         }
 
         if (pageSubtitleElement) {
-            pageSubtitleElement.textContent = `${route.label} overview and activity details.`;
+            pageSubtitleElement.textContent = route.key === 'dashboard'
+                ? 'Overview for schedules, sales monitoring, and operations.'
+                : `${route.label} workspace and activity details.`;
         }
     };
 
