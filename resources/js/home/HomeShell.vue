@@ -1,6 +1,7 @@
 <template>
     <v-app class="gs-app">
         <v-navigation-drawer
+            v-if="!props.externalSidebar"
             v-model="drawer"
             :temporary="mdAndDown"
             :permanent="!mdAndDown"
@@ -43,7 +44,7 @@
                 <header class="app-header">
                     <div class="header-left">
                         <v-btn
-                            v-if="mdAndDown"
+                            v-if="mdAndDown && !props.externalSidebar"
                             variant="text"
                             icon
                             class="menu-btn"
@@ -85,7 +86,7 @@
             </div>
 
             <v-bottom-navigation
-                v-if="mdAndDown"
+                v-if="mdAndDown && !props.externalSidebar"
                 class="mobile-bottom-nav"
                 grow
                 :model-value="activeRoute.key"
@@ -108,6 +109,12 @@
 </template>
 
 <script setup>
+const props = defineProps({
+    externalSidebar: {
+        type: Boolean,
+        default: false,
+    },
+});
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { useDisplay } from 'vuetify';
 import { DEFAULT_ROUTE_PATH, getRouteByPath, redirectTo, routes } from '../routes';
@@ -171,3 +178,4 @@ onBeforeUnmount(() => {
     window.removeEventListener('popstate', syncRouteFromUrl);
 });
 </script>
+

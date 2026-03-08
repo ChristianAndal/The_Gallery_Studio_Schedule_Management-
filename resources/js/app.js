@@ -25,4 +25,8 @@ const vuetify = createVuetify({
     },
 });
 
-createApp(HomeShell).use(vuetify).mount('#app');
+const mountEl = document.getElementById('app');
+const externalSidebar = mountEl?.dataset?.externalSidebar === '1';
+
+createApp(HomeShell, { externalSidebar }).use(vuetify).mount('#app');
+
